@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aniversário de 22 anos do Lucas 🎉🍔</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: radial-gradient(circle at top, #ff006e, #ffbe0b, #3a86ff);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    max-width: 420px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.35);
+    overflow: hidden;
+    animation: pop 0.6s ease;
+  }
+  @keyframes pop {
+    from { transform: scale(.9) rotate(-1deg); opacity: 0; }
+    to { transform: scale(1) rotate(0); opacity: 1; }
+  }
+  .header {
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+    color: #fff;
+    padding: 24px;
+    text-align: center;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 30px;
+  }
+  .header p {
+    margin: 10px 0 0;
+    font-size: 16px;
+  }
+  .content {
+    padding: 20px;
+  }
+  .info {
+    background: #fff1c1;
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
+  .info p {
+    margin: 6px 0;
+  }
+  .menu {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .menu span {
+    background: #ffbe0b;
+    padding: 12px 18px;
+    border-radius: 999px;
+    display: inline-block;
+    transform: rotate(-2deg);
+  }
+  .actions {
+    text-align: center;
+  }
+  .btn {
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    padding: 16px;
+    font-size: 17px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: transform .1s ease;
+  }
+  .btn:active { transform: scale(.96); }
+  .yes { background: #06d6a0; color: #fff; }
+  .maybe { background: #ffd166; color: #333; }
+  .no { background: #ef476f; color: #fff; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 12px;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <h1>🎉 Aniversário de 22 anos do Lucas 🎉</h1>
+      <p>Vem envelhecer comigo e comer hambúrguer 😜🍔</p>
+    </div>
+
+    <div class="content">
+      <div class="info">
+        <p>📅 <strong>Domingo, 25/01</strong></p>
+        <p>⏰ <strong>12h</strong></p>
+        <p>📍 <strong>Rua Icaraí, 291 – Vila Pires</strong></p>
+      </div>
+
+      <div class="menu">
+        <span>🍔 Hambúrguer de carne na faixa</span>
+      </div>
+
+      <div class="actions">
+        <button class="btn yes" onclick="rsvp('Claro, tô dentro! Bora comer hambúrguer 😜🍔')">🔥 Vou fácil!</button>
+        <button class="btn maybe" onclick="rsvp('Talvez… se eu sobreviver até domingo 😅')">🤔 Talvez</button>
+        <button class="btn no" onclick="rsvp('Não vou conseguir, mas vou comer por você depois 😢')">💔 Não vou</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      Escolhe aí 👆 que já cai direto no WhatsApp do Lucas
+    </div>
+  </div>
+
+<script>
+  function rsvp(resposta) {
+    const texto = encodeURIComponent(
+      "Confirmação de presença – Aniversário de 22 anos do Lucas 🎉\n" +
+      "Resposta: " + resposta + "\n\n" +
+      "📅 Domingo, 25/01\n" +
+      "⏰ 12h\n" +
+      "📍 Rua Icaraí, 291 – Vila Pires"
+    );
+    const phone = "5511912162452";
+    const url = "https://wa.me/" + phone + "?text=" + texto;
+    window.open(url, "_blank");
+  }
+</script>
+</body>
+</html>
